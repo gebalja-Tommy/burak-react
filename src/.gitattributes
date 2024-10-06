@@ -1,0 +1,16 @@
+# Ignore vendored libraries
+node_modules/* linguist-vendored
+vendor/* linguist-vendored
+
+# Ignore generated/minified files
+*.min.js linguist-generated
+*.min.css linguist-generated
+*.map linguist-generated
+
+# Set language for specific files
+*.ts linguist-language=TypeScript
+*.js linguist-language=JavaScript
+*.scss linguist-language=SCSS
+
+# Ignore documentation in language stats
+*.md linguist-documentation
