@@ -1,17 +1,17 @@
 import React from "react";
 import { Box, Button, Container, Typography, Stack } from "@mui/material";
 import { Link, Route, Switch, useLocation } from "react-router-dom";
-import * as homePage from "./screens/homePage";
-import { ProductsPage } from "./screens/productsPage";
-import { OrdersPage } from "./screens/ordersPage";
-import { UserPage } from "./screens/userPage";
-import { HomeNavbar } from "./components/headers/HomeNavbar";
+import  HomePage  from "./screens/homePage";
+import  ProductsPage  from "./screens/productsPage";
+import  OrdersPage  from "./screens/ordersPage";
+import  UserPage  from "./screens/userPage";
+import  HomeNavbar  from "./components/headers/HomeNavbar";
 import OtherNavbar  from './components/headers/OtherNavbar';
 import Footer from "./components/footer";
 import "../css/app.css";
 import "../css/navbar.css";
 import "../css/footer.css";
-import { HelpPage } from "./screens/helpPage";
+import  HelpPage  from "./screens/helpPage";
 
 function App() {
   const location = useLocation();
@@ -32,7 +32,7 @@ function App() {
         <Route path="/help"></Route>
         <HelpPage />
         <Route path="/">
-          <homePage.HomePage />
+          <HomePage />
         </Route>
       </Switch>
       <Footer />
