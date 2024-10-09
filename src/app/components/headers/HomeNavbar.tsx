@@ -1,5 +1,7 @@
 import { Box, Button, Container, Stack } from "@mui/material";
 import { NavLink } from "react-router-dom";
+import Basket from "./Basket";
+import React from "react";
 
 export function HomeNavbar() {
   const authMember = null;
@@ -9,13 +11,13 @@ export function HomeNavbar() {
         <Stack className="menu">
           <Box>
             <NavLink to="/">
-              <img className="brand-logo" src="/icons/burak.svg" />
+              <img className="brand-logo" src="/icons/burak.svg" alt="" />
             </NavLink>
           </Box>
           <Stack className="links">
             <Box className={"hover-line"}>
               <NavLink to="/" activeClassName={"underline"}>
-                HOME
+                Home
               </NavLink>
             </Box>
             <Box className={"hover-line"}>
@@ -42,7 +44,8 @@ export function HomeNavbar() {
                 Help
               </NavLink>
             </Box>
-            {/*BASKET*/}
+
+            <Basket />
 
             {!authMember ? (
               <Box>
@@ -59,7 +62,25 @@ export function HomeNavbar() {
             )}
           </Stack>
         </Stack>
-        <Stack>DETAIL</Stack>
+        <Stack className={"header-frame"}>
+          <Stack className={"detail"}>
+            <Box className={"head-main-txt"}>
+              World`s Most Delicious Cousine
+            </Box>
+            <Box className={"wel-txt"}>The Choice, not just a choice</Box>
+            <Box className={"service-txt"}>24 hours service</Box>
+            <Box className={"signup"}>
+              {!authMember ? (
+                <Button variant={"contained"} className="signup-button">
+                  SIGN UP
+                </Button>
+              ) : null}
+            </Box>
+          </Stack>
+          <Stack className={"logo-frame"}>
+          <div className={"logo-img"}></div>
+          </Stack>
+        </Stack>
       </Container>
     </div>
   );
