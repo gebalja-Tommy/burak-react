@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Button, Container, Typography, Stack } from "@mui/material";
 import { Link, Route, Switch, useLocation } from "react-router-dom";
-import { HomePage } from "./screens/homePage";
+import * as homePage from "./screens/homePage";
 import { ProductsPage } from "./screens/productsPage";
 import { OrdersPage } from "./screens/ordersPage";
 import { UserPage } from "./screens/userPage";
@@ -32,7 +32,7 @@ function App() {
         <Route path="/help"></Route>
         <HelpPage />
         <Route path="/">
-          <HomePage />
+          <homePage.HomePage />
         </Route>
       </Switch>
       <Footer />

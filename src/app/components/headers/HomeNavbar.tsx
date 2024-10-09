@@ -1,6 +1,6 @@
 import { Box, Button, Container, Stack } from "@mui/material";
 import { NavLink } from "react-router-dom";
-import Basket from "./Basket";
+import Basket from ".\components\headers\Basket";
 import React from "react";
 
 export function HomeNavbar() {
